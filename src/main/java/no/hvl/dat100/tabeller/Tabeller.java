@@ -35,43 +35,61 @@ public class Tabeller {
     // d)
     public static boolean finnesTall(int[] tabell, int tall) {
         int i = 0;
-        while ( i < tabell.length) {
+        while (i < tabell.length) {
             if (tabell[i] == tall) {
                 return true;
-            } i++;
-        } return false;
+            }
+            i++;
+        }
+        return false;
     }
 
-	// e)
-	public static int posisjonTall(int[] tabell, int tall) {
+    // e)
+    public static int posisjonTall(int[] tabell, int tall) {
 
         for (int i = 0; i < tabell.length; i++) {
             if (tabell[i] == tall) {
                 return i;
             }
-            return -1;
         }
+        return -1;
     }
 
-	// f)
-	public static int[] reverser(int[] tabell) {
+    // f)
+    public static int[] reverser(int[] tabell) {
+        int[] nyTabell = new int[tabell.length];
+        int j = 0;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
-	}
+        for (int i = tabell.length - 1; i >= 0; i--) {
+            nyTabell[j] += tabell[i];
+            j++;
+        }
+        return nyTabell;
+    }
 
-	// g)
-	public static boolean erSortert(int[] tabell) {
+    // g)
+    public static boolean erSortert(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
-	}
+        for (int i = 1; i < tabell.length; i++) {
+            if (tabell[i] <= tabell[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-	// h)
-	public static int[] settSammen(int[] tabell1, int[] tabell2) {
+    // h)
+    public static int[] settSammen(int[] tabell1, int[] tabell2) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
+        int[] nyTabell = new int[tabell1.length + tabell2.length];
 
-	}
+        for (int i = 0; i < tabell1.length; i++) {
+            nyTabell[i] = tabell1[i];
+        }
+
+        for (int j = 0; j < tabell2.length; j++) {
+            nyTabell[tabell1.length + j] = tabell2[j];
+        }
+        return nyTabell;
+    }
 }
