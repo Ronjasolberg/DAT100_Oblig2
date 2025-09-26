@@ -25,8 +25,8 @@ public class Tabeller {
 
 
 
-		// TODO
-		// throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+
+
 	}
 
 	// c)
@@ -53,9 +53,13 @@ public class Tabeller {
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
+        for (int i=0; i < tabell.length; i++) {
+            if (tabell[i] == tall) {
+                return i;
+            }
+        }
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+           return -1 ;
 	}
 
 	// f)
