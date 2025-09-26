@@ -12,23 +12,43 @@ public class Tabeller {
 	// b)
 	public static String tilStreng(int[] tabell) {
 
+        String resultat = "[";
+
+        for (int i = 0; i < tabell.length; i++) {
+            resultat += tabell[i];
+            if (i < tabell.length - 1) {
+                resultat += ",";
+            }
+        }
+        resultat += "]";
+        return resultat;
+
+
+
 		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		// throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
+        int sum = 0;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+        for (int i = 0; i < tabell.length; i++){
+           sum += tabell[i];
+        }
+          return sum;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+        int i = 0;
+        while (i < tabell.length) {
+            if (tabell[i] == tall) {
+                return true;
+            }
+            i++;
+        }
+        return false;
 	}
 
 	// e)
