@@ -26,11 +26,16 @@ public class Matriser {
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
-	
-	}
+
+        int[][] nyMatrise = new int[matrise.length][matrise[0].length];
+        for (int i = 0; i < matrise.length; i++) {
+            for (int j = 0; j < matrise[i].length; j++) {
+                nyMatrise[i][j] = matrise[i][j] * tall;
+            }
+            
+        }
+        return nyMatrise;
+     }
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
