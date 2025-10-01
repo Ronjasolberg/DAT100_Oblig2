@@ -75,19 +75,8 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
                  for (int i = 1; i < tabell.length; i++)  {
-                     if (tabell[i];   {
+                     if (tabell[i]);   {
 
 
 
-
-
-	}
-
-	// h)
-	public static int[] settSammen(int[] tabell1, int[] tabell2) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
-
-	}
-}
+// h)
