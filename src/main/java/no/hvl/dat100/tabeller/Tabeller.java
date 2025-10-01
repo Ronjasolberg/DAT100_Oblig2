@@ -74,9 +74,38 @@ public class Tabeller {
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
+
                  for (int i = 1; i < tabell.length; i++)  {
                      if (tabell[i]);   {
 
 
 
 // h)
+
+
+        for (int i = 1; i < tabell.length; i++){
+            if (tabell[i] <= tabell[i - 1]){
+                return false;
+                }
+            }
+            return true;
+
+
+        
+	}
+
+	// h)
+	public static int[] settSammen(int[] tabell1, int[] tabell2) {
+       int[] sammenSatt = new int [tabell1.length + tabell2.length];
+
+       for (int i = 0; i < tabell1.length; i++){
+           sammenSatt[i] = tabell1[i];
+       }
+       for (int j = 0; j < tabell2.length; j++ ){
+           sammenSatt[tabell1.length + j] = tabell2[j];
+       }
+       return sammenSatt;
+	}
+  }
+
+
