@@ -2,51 +2,63 @@ package no.hvl.dat100.matriser;
 
 public class Matriser {
 
-	// a)
-	public static void skrivUt(int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
-	}
+    // a)
+    public static void skrivUt(int[][] matrise) {
 
-	// b)
-	public static String tilStreng(int[][] matrise) {
+        for (int[] rad : matrise) {
+            for (int element : rad) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
+    }
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
-		
-	}
+    // b)
+    public static String tilStreng(int[][] matrise) {
 
-	// c)
-	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
-	
-	}
+        String resultat = "";
 
-	// d)
-	public static boolean erLik(int[][] a, int[][] b) {
+        for (int i = 0; i < matrise.length; i++) {
+            for (int j = 0; j < matrise[i].length; j++) {
+                resultat += matrise[i][j] + " ";
+            }
+            resultat += "\n";
+        }
+        return resultat;
+    }
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erLik ikke implementert");
-		
-	}
-	
-	// e)
-	public static int[][] speile(int[][] matrise) {
+    // c)
+    public static int[][] skaler(int tall, int[][] matrise) {
 
-		// TODO
+        int[][] nyMatrise = new int[matrise.length][matrise[0].length];
 
-		throw new UnsupportedOperationException("Metoden speile ikke implementert");
-	
-	}
+        for (int i = 0; i < matrise.length; i++) {
+            for (int j = 0; j < matrise[i].length; j++) {
+                nyMatrise[i][j] = matrise[i][j] * tall;
+            }
+        }
+        return nyMatrise;
+    }
 
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
+    // d)
+    public static boolean erLik(int[][] a, int[][] b) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
-	
-	}
+        if (a.length != b.length) {
+            return false;
+        }
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i].length != b[i].length) {
+                return false;
+            }
+
+            for (int j = 0; j < b[i].length; j++) {
+                if (a[i][j] != b[i][j]) {
+                    return false;
+                }
+            }
+        } return true;
+    }
 }
+
+
