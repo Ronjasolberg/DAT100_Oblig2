@@ -73,9 +73,9 @@ public class Tabeller {
 	}
 
 	// g)
-	public static boolean erSortert(int[] tabell) {
+	/*public static boolean erSortert(int[] tabell) {
                  for (int i = 1; i < tabell.length; i++)  {
-                     if (tabell[i]   {
+                     if (tabell[i]   {*/
 
 
 
